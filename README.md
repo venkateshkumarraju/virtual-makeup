@@ -1,6 +1,8 @@
 # virtual-makeup
 real time virtual sunglasses and lipstick
 In this project i tried to build a virtual makeup application using facial landmarks. The application consists of two features:lipstick and sunglass 
+
+
 **feature 1 is lipstick**
 Importing necessary libraries: The script begins by importing necessary libraries such as OpenCV (cv2), dlib, numpy, matplotlib, and a custom module named faceBlendCommon.
 Setting up dlib’s face detector and shape predictor: The shape_predictor object is initialized with the pre-trained model file “shape_predictor_68_face_landmarks.dat”. This model is used to detect facial landmarks in an image. The detector object is dlib’s default face detector.
@@ -10,6 +12,8 @@ Creates a mask for the lips and fills it with white color.
 Defines a lipstick color in BGR format
 Applies the lipstick color to the masked region in the frame.
 Blends the original image with the lipstick image using cv2.addWeighted
+
+
 **feature 2 is suglass**
 Importing necessary libraries: The script begins by importing necessary libraries such as OpenCV (cv2), dlib, numpy, matplotlib, and a custom module named faceBlendCommon.
 Setting up dlib’s face detector and shape predictor: The shape_predictor object is initialized with the pre-trained model file “shape_predictor_68_face_landmarks.dat”. This model is used to detect facial landmarks in an image. The detector object is dlib’s default face detector.
