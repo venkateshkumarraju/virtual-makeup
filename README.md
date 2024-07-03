@@ -13,6 +13,8 @@ Defines a lipstick color in BGR format
 Applies the lipstick color to the masked region in the frame.
 Blends the original image with the lipstick image using cv2.addWeighted
 
+![image](https://github.com/venkateshkumarraju/virtual-makeup/assets/160125434/beb95389-585d-4600-892e-a36df0c761c9)
+
 
 **feature 2 is suglass**
 Importing necessary libraries: The script begins by importing necessary libraries such as OpenCV (cv2), dlib, numpy, matplotlib, and a custom module named faceBlendCommon.
@@ -22,3 +24,7 @@ The width of the glasses based on the distance between the eyes (eye_width).
 The center point between the eyes (center_eye).
 The top-left corner of the glasses image (top_left).
 The glasses image is resized to fit into the face (glasses_resized) and splits it into color channels and an alpha channel (for transparency). blend the resize glasses image onto the original image by combining the color channels and adjusting transparency.
+output 
+
+![image](https://github.com/venkateshkumarraju/virtual-makeup/assets/160125434/0068ee33-22a9-41b1-a382-f818dbcee29b)
+
