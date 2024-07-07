@@ -4,7 +4,7 @@ In this project i tried to build a virtual makeup application using facial landm
 
 
 **feature 1 is lipstick**
-Importing necessary libraries: The script begins by importing necessary libraries such as OpenCV (cv2), dlib, numpy, matplotlib, and a custom module named faceBlendCommon.
+Importing necessary libraries  such as OpenCV (cv2), dlib, numpy, matplotlib, and a custom module named faceBlendCommon.
 Setting up dlib’s face detector and shape predictor: The shape_predictor object is initialized with the pre-trained model file “shape_predictor_68_face_landmarks.dat”. This model is used to detect facial landmarks in an image. The detector object is dlib’s default face detector.
 Extracts the landmarks using the shape_predictor.
 Gets the coordinates of the lips (landmarks 48 to 60).
@@ -13,11 +13,13 @@ Defines a lipstick color in BGR format
 Applies the lipstick color to the masked region in the frame.
 Blends the original image with the lipstick image using cv2.addWeighted
 
+
+
 ![image](https://github.com/venkateshkumarraju/virtual-makeup/assets/160125434/beb95389-585d-4600-892e-a36df0c761c9)
 
 
 **feature 2 is suglass**
-Importing necessary libraries: The script begins by importing necessary libraries such as OpenCV (cv2), dlib, numpy, matplotlib, and a custom module named faceBlendCommon.
+Importing necessary libraries such as OpenCV (cv2), dlib, numpy, matplotlib, and a custom module named faceBlendCommon.
 Setting up dlib’s face detector and shape predictor: The shape_predictor object is initialized with the pre-trained model file “shape_predictor_68_face_landmarks.dat”. This model is used to detect facial landmarks in an image. The detector object is dlib’s default face detector.
 The coordinates of the eyes (using landmarks 36 and 45, which correspond to the left and right eyes).
 The width of the glasses based on the distance between the eyes (eye_width).
