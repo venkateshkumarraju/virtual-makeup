@@ -14,8 +14,8 @@ Applies the lipstick color to the masked region in the frame.
 Blends the original image with the lipstick image using cv2.addWeighted
 
 
+![output_1](https://github.com/user-attachments/assets/09cf0d32-536d-40ff-992c-da519433ea5c)
 
-![image](https://github.com/venkateshkumarraju/virtual-makeup/assets/160125434/beb95389-585d-4600-892e-a36df0c761c9)
 
 
 **feature 2 is suglass**
@@ -28,5 +28,5 @@ The top-left corner of the glasses image (top_left).
 The glasses image is resized to fit into the face (glasses_resized) and splits it into color channels and an alpha channel (for transparency). blend the resize glasses image onto the original image by combining the color channels and adjusting transparency.
 
 
-![image](https://github.com/venkateshkumarraju/virtual-makeup/assets/160125434/0068ee33-22a9-41b1-a382-f818dbcee29b)
 
+![output_2](https://github.com/user-attachments/assets/74e36d1b-a2d5-4e84-8fde-4cee43193362)
