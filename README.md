@@ -54,8 +54,6 @@ plt.imshow(imDlib)
 
 
 
-![download](https://github.com/user-attachments/assets/04691fca-3350-4793-9547-b08b2bf6860f)
-
 ** Apply lipstick to the detected lips:**
 
 
@@ -86,8 +84,9 @@ for face in faces:
 plt.imshow(imDlib[:, :, ::-1])
 plt.show()
 
+![image](https://github.com/user-attachments/assets/2e06e99c-5731-46b6-91a5-303ec0edb8d0)
 
-![output_1](https://github.com/user-attachments/assets/09cf0d32-536d-40ff-992c-da519433ea5c)
+
 
 **Define a function to overlay sunglasses on the detected landmarks:**
 
@@ -152,8 +151,6 @@ while True:
 # Release the webcam and close the window
 cap.release()
 cv2.destroyAllWindows()
-
-![output_2](https://github.com/user-attachments/assets/74e36d1b-a2d5-4e84-8fde-4cee43193362)
 
 
 
