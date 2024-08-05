@@ -21,8 +21,8 @@ cd <repository-directory>
 pip install -r requirements.txt
 
 
-##Usage
-##Load Landmark Detector
+**###Usage**
+**##Load Landmark Detector**
 The following code loads the landmark detector model:
 
 import dlib
