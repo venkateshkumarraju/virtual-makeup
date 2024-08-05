@@ -20,9 +20,9 @@ cd <repository-directory>
 # Install dependencies
 pip install -r requirements.txt
 
+[Usage:]
+Load Landmark Detector:
 
-*** #Load Landmark Detector ***
-The following code loads the landmark detector model:
 import dlib
 # Landmark model location
 PREDICTOR_PATH = "../resource/lib/publicdata/models/shape_predictor_68_face_landmarks.dat"
@@ -31,7 +31,7 @@ faceDetector = dlib.get_frontal_face_detector()
 # The landmark detector is implemented in the shape_predictor class
 landmarkDetector = dlib.shape_predictor(PREDICTOR_PATH)
 
-** Read Image **
+Read Image 
 Load an image and convert it to RGB format:
 import cv2
 import matplotlib.pyplot as plt
@@ -39,7 +39,7 @@ im = cv2.imread("../resource/lib/publicdata/images/girl-no-makeup.jpg")
 imDlib = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 plt.imshow(imDlib)
 
-**Calculate the facial landmarks:**
+Calculate the facial landmarks:
 
 import faceBlendCommon as fbc
 points = fbc.getLandmarks(faceDetector, landmarkDetector, imDlib)
@@ -54,7 +54,7 @@ plt.imshow(imDlib)
 
 
 
-** Apply lipstick to the detected lips:**
+Apply lipstick to the detected lips:
 
 
 import numpy as np
@@ -84,11 +84,12 @@ for face in faces:
 plt.imshow(imDlib[:, :, ::-1])
 plt.show()
 
-![image](https://github.com/user-attachments/assets/2e06e99c-5731-46b6-91a5-303ec0edb8d0)
+![output_1](https://github.com/user-attachments/assets/8d433dd5-b1d2-4146-a33c-6d0aefa0208e)
 
 
 
-**Define a function to overlay sunglasses on the detected landmarks:**
+
+Define a function to overlay sunglasses on the detected landmarks:
 
 def overlay_glasses(image, glasses, landmarks):
     # Extracting the coordinates of the eyes
@@ -121,7 +122,7 @@ def overlay_glasses(image, glasses, landmarks):
 
     return image
 
-** ##Real-Time Sunglasses Overlay**
+Real-Time Sunglasses Overlay
 Capture video from the webcam and overlay sunglasses in real-time:
 
 cap = cv2.VideoCapture(0)
@@ -152,6 +153,7 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
+![output_2](https://github.com/user-attachments/assets/8aa78a53-c4e8-4fa0-8ecf-c07a035fdc4f)
 
 
 
