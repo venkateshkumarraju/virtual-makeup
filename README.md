@@ -19,10 +19,10 @@ cd <repository-directory>
 
 # Install dependencies
 pip install -r requirements.txt
-
-## Usage:
+```
+### Usage:
 Load Landmark Detector:
-
+```
 import dlib
 # Landmark model location
 PREDICTOR_PATH = "../resource/lib/publicdata/models/shape_predictor_68_face_landmarks.dat"
@@ -30,33 +30,31 @@ PREDICTOR_PATH = "../resource/lib/publicdata/models/shape_predictor_68_face_land
 faceDetector = dlib.get_frontal_face_detector()
 # The landmark detector is implemented in the shape_predictor class
 landmarkDetector = dlib.shape_predictor(PREDICTOR_PATH)
-
+```
 ## Read Image 
 Load an image and convert it to RGB format:
+```
 import cv2
 import matplotlib.pyplot as plt
 im = cv2.imread("../resource/lib/publicdata/images/girl-no-makeup.jpg")
 imDlib = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 plt.imshow(imDlib)
-
+```
 ## Calculate the facial landmarks:
-
+```
 import faceBlendCommon as fbc
 points = fbc.getLandmarks(faceDetector, landmarkDetector, imDlib)
-
-Display Facial Landmarks
+```
+## Display Facial Landmarks
 Display the facial landmarks on the image:
-
+```
 for i, point in enumerate(points):
     cv2.circle(imDlib, point, 2, (0, 255, 0), thickness=-1)  # Green color
     cv2.putText(imDlib, str(i), (point[0], point[1] - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1)  # Red color
 plt.imshow(imDlib)
-
-
-
+```
 ## Apply lipstick to the detected lips:
-
-
+```
 import numpy as np
 
 # Detect faces
@@ -83,14 +81,12 @@ for face in faces:
 # Display the image
 plt.imshow(imDlib[:, :, ::-1])
 plt.show()
-
+```
+### OUTPUT 
 ![output_1](https://github.com/user-attachments/assets/8d433dd5-b1d2-4146-a33c-6d0aefa0208e)
 
-
-
-
 ## Define a function to overlay sunglasses on the detected landmarks:
-
+```
 def overlay_glasses(image, glasses, landmarks):
     # Extracting the coordinates of the eyes
     left_eye = (landmarks.part(36).x, landmarks.part(36).y)
@@ -121,10 +117,10 @@ def overlay_glasses(image, glasses, landmarks):
         )
 
     return image
-
-Real-Time Sunglasses Overlay
+```
+## Real-Time Sunglasses Overlay
 Capture video from the webcam and overlay sunglasses in real-time:
-
+```
 cap = cv2.VideoCapture(0)
 # Define the codec and create a VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
@@ -152,7 +148,8 @@ while True:
 # Release the webcam and close the window
 cap.release()
 cv2.destroyAllWindows()
-
+```
+### OUTPUT 
 ![output_2](https://github.com/user-attachments/assets/8aa78a53-c4e8-4fa0-8ecf-c07a035fdc4f)
 
 
