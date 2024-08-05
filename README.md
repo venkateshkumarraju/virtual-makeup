@@ -20,8 +20,8 @@ cd <repository-directory>
 # Install dependencies
 pip install -r requirements.txt
 
-## Usage
-Load Landmark Detector
+
+*** #Load Landmark Detector ***
 The following code loads the landmark detector model:
 import dlib
 # Landmark model location
@@ -31,7 +31,7 @@ faceDetector = dlib.get_frontal_face_detector()
 # The landmark detector is implemented in the shape_predictor class
 landmarkDetector = dlib.shape_predictor(PREDICTOR_PATH)
 
-Read Image
+** Read Image **
 Load an image and convert it to RGB format:
 import cv2
 import matplotlib.pyplot as plt
@@ -39,8 +39,7 @@ im = cv2.imread("../resource/lib/publicdata/images/girl-no-makeup.jpg")
 imDlib = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 plt.imshow(imDlib)
 
-Calculate Facial Landmarks
-Calculate the facial landmarks:
+**Calculate the facial landmarks:**
 
 import faceBlendCommon as fbc
 points = fbc.getLandmarks(faceDetector, landmarkDetector, imDlib)
@@ -57,7 +56,7 @@ plt.imshow(imDlib)
 
 ![download](https://github.com/user-attachments/assets/04691fca-3350-4793-9547-b08b2bf6860f)
 
-## Apply lipstick to the detected lips:
+** Apply lipstick to the detected lips:**
 
 
 import numpy as np
@@ -90,8 +89,7 @@ plt.show()
 
 ![output_1](https://github.com/user-attachments/assets/09cf0d32-536d-40ff-992c-da519433ea5c)
 
-Define a function to overlay sunglasses on the detected landmarks:
-
+**Define a function to overlay sunglasses on the detected landmarks:**
 
 def overlay_glasses(image, glasses, landmarks):
     # Extracting the coordinates of the eyes
@@ -124,7 +122,7 @@ def overlay_glasses(image, glasses, landmarks):
 
     return image
 
-##Real-Time Sunglasses Overlay
+** ##Real-Time Sunglasses Overlay**
 Capture video from the webcam and overlay sunglasses in real-time:
 
 cap = cv2.VideoCapture(0)
@@ -155,13 +153,9 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
-
-Output Examples
-Feature	Output Image
-Lipstick Feature	
-Sunglasses Feature	
-
 ![output_2](https://github.com/user-attachments/assets/74e36d1b-a2d5-4e84-8fde-4cee43193362)
+
+
 
 
 
