@@ -12,10 +12,7 @@ To get started, clone the repository and install the required dependencies:
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-
-# Navigate to the project directory
-cd <repository-directory>
+git clone https://github.com/venkateshkumarraju/virtual-makeup.git
 
 # Install dependencies
 pip install -r requirements.txt
