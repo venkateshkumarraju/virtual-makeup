@@ -152,7 +152,29 @@ cv2.destroyAllWindows()
 ### OUTPUT 
 ![output_2](https://github.com/user-attachments/assets/8aa78a53-c4e8-4fa0-8ecf-c07a035fdc4f)
 
+# FAQ
+## What image formats are supported?
+Currently, the scripts support JPG and PNG formats.
+
+## Can I change the color of the lipstick?
+Yes, you can modify the color parameter in the feature+1+lipstick.py script to change the lipstick color.
+
+## How do I customize the sunglasses style?
+You can replace the sunglasses overlay image in the feature2+sunglasses.py script with your own image to customize the style.
+## Are there any limitations?
+The effectiveness of the features depends on the quality and resolution of the input images. High-quality images with clear facial features will yield better results.
+
+## Contributing
+Feel free to contribute to this project by submitting issues or pull requests. Please follow the contribution guidelines.
+
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 
+You can further customize this template by adding more sections, such as "Features", "Known Issues", "Future Work", or any other relevant information. Let me know if you need any additional details or modifications!
+
+
+# Contact
+For any questions, suggestions, or feedback, please contact us at raju.venkateshkumar@gmail.com 
 
 
