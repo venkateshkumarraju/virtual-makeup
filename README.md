@@ -20,52 +20,16 @@ cd <repository-directory>
 # Install dependencies
 pip install -r requirements.txt
 
-
-### USAGE
+### Usage
 Load Landmark Detector
 The following code loads the landmark detector model:
 
-import dlib
-
-# Landmark model location
-PREDICTOR_PATH = "../resource/lib/publicdata/models/shape_predictor_68_face_landmarks.dat"
-
-# Get the face detector
-faceDetector = dlib.get_frontal_face_detector()
-# The landmark detector is implemented in the shape_predictor class
-landmarkDetector = dlib.shape_predictor(PREDICTOR_PATH)
-
-Read Image
-Load an image and convert it to RGB format:
-
-import cv2
-import matplotlib.pyplot as plt
-
-im = cv2.imread("../resource/lib/publicdata/images/girl-no-makeup.jpg")
-imDlib = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
-plt.imshow(imDlib)
 
 
-
-Calculate the facial landmarks:
-
-import faceBlendCommon as fbc
-
-points = fbc.getLandmarks(faceDetector, landmarkDetector, imDlib)
-print(points)
-
-Display the facial landmarks on the image:
-
-for i, point in enumerate(points):
-    cv2.circle(imDlib, point, 2, (0, 255, 0), thickness=-1)  # Green color
-    cv2.putText(imDlib, str(i), (point[0], point[1] - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1)  # Red color
-plt.imshow(imDlib)
-## output
 ![download](https://github.com/user-attachments/assets/04691fca-3350-4793-9547-b08b2bf6860f)
 
-Apply lipstick to the detected lips:
+#### Apply lipstick to the detected lips:
 
-Python
 
 import numpy as np
 
