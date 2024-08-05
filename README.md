@@ -20,7 +20,7 @@ cd <repository-directory>
 # Install dependencies
 pip install -r requirements.txt
 
-[Usage:]
+## Usage:
 Load Landmark Detector:
 
 import dlib
@@ -31,7 +31,7 @@ faceDetector = dlib.get_frontal_face_detector()
 # The landmark detector is implemented in the shape_predictor class
 landmarkDetector = dlib.shape_predictor(PREDICTOR_PATH)
 
-Read Image 
+## Read Image 
 Load an image and convert it to RGB format:
 import cv2
 import matplotlib.pyplot as plt
@@ -39,7 +39,7 @@ im = cv2.imread("../resource/lib/publicdata/images/girl-no-makeup.jpg")
 imDlib = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
 plt.imshow(imDlib)
 
-Calculate the facial landmarks:
+## Calculate the facial landmarks:
 
 import faceBlendCommon as fbc
 points = fbc.getLandmarks(faceDetector, landmarkDetector, imDlib)
@@ -54,7 +54,7 @@ plt.imshow(imDlib)
 
 
 
-Apply lipstick to the detected lips:
+## Apply lipstick to the detected lips:
 
 
 import numpy as np
@@ -89,7 +89,7 @@ plt.show()
 
 
 
-Define a function to overlay sunglasses on the detected landmarks:
+## Define a function to overlay sunglasses on the detected landmarks:
 
 def overlay_glasses(image, glasses, landmarks):
     # Extracting the coordinates of the eyes
