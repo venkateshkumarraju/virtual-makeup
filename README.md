@@ -161,8 +161,7 @@ You can replace the sunglasses overlay image in the feature2+sunglasses.py scrip
 ## Are there any limitations?
 The effectiveness of the features depends on the quality and resolution of the input images. High-quality images with clear facial features will yield better results.
 
-## Contributing
-Feel free to contribute to this project by submitting issues or pull requests. Please follow the contribution guidelines.
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
