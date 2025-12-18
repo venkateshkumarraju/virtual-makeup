@@ -163,11 +163,7 @@ The effectiveness of the features depends on the quality and resolution of the i
 
 
 
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-
-You can further customize this template by adding more sections, such as "Features", "Known Issues", "Future Work", or any other relevant information. Let me know if you need any additional details or modifications!
 
 
 # Contact
